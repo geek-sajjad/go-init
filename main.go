@@ -1,6 +1,7 @@
 package main
 
 func main() {
+
 	// variables
 
 	// Explicit define
@@ -75,4 +76,18 @@ func main() {
 
 	// When you pass an array to a function, it's passed by value, meaning a copy of the array is made. To avoid copying large arrays, you can pass a pointer to the array or use slices instead
 
+	// Slices
+
+	// var mySlice []int
+
+	// mySlice := []int{1, 2, 3, 4}
+
+	// println(mySlice)
+
+	// mySlice = append(mySlice, 5, 6)
+
+	// When you pass a slice to a function, you're passing a reference to the underlying array. Any modifications made to the slice within the function will be reflected in the original slice
+
+	// var nilSlice []int
+	// fmt.Println(nilSlice)
 }
