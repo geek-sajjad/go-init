@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 
 	// variables
@@ -90,4 +92,88 @@ func main() {
 
 	// var nilSlice []int
 	// fmt.Println(nilSlice)
+
+	// Functions
+
+	// result := add(3, 5)
+	// a, b := swap(10, 20)
+
+	//Function Types and Interfaces
+
+	// Anonymous Functions (Closures):
+	// increment := func(x, y int) int {
+	// 	return x + y
+	// }
+
+	// increment(2, 3)
+
+	// Variadic Functions
+	// fmt.Println(sum(4, 6, 10))
+
+	// Named return values
+
+	// result := add(2, 3)
+	// fmt.Println(result)
+
+	// Interfaces
+	// c := Circle{Radius: 5.0}
+	// PrintShapeInfo(c)
+
+}
+
+// Function Types and Interfaces
+// type BinaryOperation func(int, int) int
+
+// func add(x int, y int) int {
+// 	return x + y
+// }
+// func swap(x, y int) (int, int) {
+// 	return y, x
+// }
+
+// func calculate(operation BinaryOperation, x, y int) int {
+// 	return operation(x, y)
+// }
+
+// Variadic Functions
+// func sum(numbers ...int) int {
+// 	// var total int
+// 	total := 0
+
+// 	for _, num := range numbers {
+// 		total += num
+// 	}
+
+// 	return total
+// }
+
+// Named return values
+// func add(x, y int) (result int) {
+// 	result = x + y
+
+// 	return
+// }
+
+// Interfaces
+type Shape interface {
+	Area() float64
+	Perimeter() float64
+}
+
+type Circle struct {
+	Radius float64
+}
+
+func (c Circle) Area() float64 {
+	Pi := 3.14
+	return Pi * c.Radius * c.Radius
+}
+
+func (c Circle) Perimeter() float64 {
+	Pi := 3.14
+	return 2 * Pi * c.Radius
+}
+func PrintShapeInfo(s Shape) {
+	fmt.Printf("Area: %f\n", s.Area())
+	fmt.Printf("Perimeter: %f\n", s.Perimeter())
 }
