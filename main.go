@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 
 	// variables
@@ -119,6 +117,15 @@ func main() {
 	// c := Circle{Radius: 5.0}
 	// PrintShapeInfo(c)
 
+	// Structs
+	// person1 := Person{
+	// 	firstName: "Sajad",
+	// 	lastName:  "Sohrabi",
+	// 	age:       24,
+	// }
+
+	// fmt.Println(person1)
+	// fmt.Println(person1.fullName())
 }
 
 // Function Types and Interfaces
@@ -155,25 +162,36 @@ func main() {
 // }
 
 // Interfaces
-type Shape interface {
-	Area() float64
-	Perimeter() float64
-}
+// type Shape interface {
+// 	Area() float64
+// 	Perimeter() float64
+// }
 
-type Circle struct {
-	Radius float64
-}
+// type Circle struct {
+// 	Radius float64
+// }
 
-func (c Circle) Area() float64 {
-	Pi := 3.14
-	return Pi * c.Radius * c.Radius
-}
+// func (c Circle) Area() float64 {
+// 	Pi := 3.14
+// 	return Pi * c.Radius * c.Radius
+// }
 
-func (c Circle) Perimeter() float64 {
-	Pi := 3.14
-	return 2 * Pi * c.Radius
-}
-func PrintShapeInfo(s Shape) {
-	fmt.Printf("Area: %f\n", s.Area())
-	fmt.Printf("Perimeter: %f\n", s.Perimeter())
-}
+// func (c Circle) Perimeter() float64 {
+// 	Pi := 3.14
+// 	return 2 * Pi * c.Radius
+// }
+// func PrintShapeInfo(s Shape) {
+// 	fmt.Printf("Area: %f\n", s.Area())
+// 	fmt.Printf("Perimeter: %f\n", s.Perimeter())
+// }
+
+// Structs
+// type Person struct {
+// 	firstName string
+// 	lastName  string
+// 	age       int
+// }
+
+// func (p Person) fullName() string {
+// 	return p.firstName + " " + p.lastName
+// }
